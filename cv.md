@@ -3,10 +3,10 @@
 
 ## Contact
 
-* GitHub - [@PG-54](http://github.com/@PG-54)
-* Telegram - [@PG-54](https://t.me/@PG-54)
-* Email - [gedonisticussr@gmail.com](mailto:gedonisticussr@gmail.com)
-* Phone - [+375-29-678-69-98](tel:+375-29-678-69-98)
+* GitHub: [@PG-54](http://github.com/@PG-54)
+* Telegram: [@PG-54](https://t.me/@PG-54)
+* Email: [gedonisticussr@gmail.com](mailto:gedonisticussr@gmail.com)
+* Phone: [+375-29-678-69-98](tel:+375-29-678-69-98)
 
 ## EDUCATION
 
