@@ -2,7 +2,11 @@
     font-family: 'Roboto';
     src: url(fonts/Roboto-Regular.ttf);
 }
-
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 :root {
     --color-bg: #1A1A1D;
     --color-dark-purple: #3B1C32;
@@ -25,7 +29,7 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-light-purple);
-    padding: 60px 0;
+    padding-top: 60px;
 }
 
 body > * {
@@ -39,7 +43,7 @@ header div {
     position: relative;
     width: 440px;
     height: 440px;
-    padding: 40px 0;
+    padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +55,7 @@ header div {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     border: var(--color-dark-purple) 10px solid;
+    box-shadow: 0 0 50px 50px #24111e;
 }
 header nav ul {
     width: 450px;
@@ -69,7 +74,6 @@ header nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: all 0.2s ease-in;
     animation: rotate-links 15s linear infinite reverse;
 }
@@ -116,11 +120,6 @@ header nav ul li a:hover, header nav ul li a:active {
 }
 
 
-
-
-
-
-
 @keyframes rotate-links {
     0% {
         transform: rotate(0deg);
@@ -128,4 +127,137 @@ header nav ul li a:hover, header nav ul li a:active {
     100% {
         transform: rotate(360deg);
     }
+}
+header h1 {
+    font-size: 4em;
+    padding: 0 0 20px;
+    text-shadow: 2px 2px 4px var(--color-dark-green);
+}
+header p {
+    font-size: 3em;
+    color: var(--color-light-green);
+    text-shadow: 2px 2px 4px var(--color-dark-purple);
+}
+
+hr {
+    margin: 80px 0 30px;
+    height: 5px;
+    background-color: var(--color-dark-purple);
+    border: none;
+}
+section {
+    padding: 40px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section h2 {
+    font-size: 3.5em;
+    color: var(--color-light-purple);
+    text-shadow: 2px 2px 4px var(--color-dark-green);
+    padding: 0 0 30px;
+}
+section p {
+    font-size: 1.5em;
+    padding: 40px;
+    background-color: 124111e;
+    color: var(--color-light-green);
+    text-shadow: 2px 2px 2px var(--color-dark-purple);
+    box-shadow: 7px 10px 7px rgba(0, 0, 0, 0.2), -3px -2px 5px -2px var(--color-light-green);
+    border-radius: 30px;
+    width: 80%;
+}      
+.skills ul {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.skills ul li {
+    background-color: var(--color-light-green);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px #24111e, -3px -2px 5px -2px var(--color-light-green);
+}
+
+.projects pre {
+    background-color: #080c08;
+    margin-top: 40px;
+    padding: 40px 60px 20px 40px;
+    border-radius: 30px;
+    text-shadow: 2px 2px 2px var(--color-dark-green);
+    box-shadow: 7px 10px 7px rgba(0, 0, 0, 0.2), -3px -2px 5px -2px var(--color-mid-green);
+}
+.about-me ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.about-me ul li {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-me h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px var(--color-dark-green);
+}
+.education ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.education ul li {
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: 124111e;
+    color: var(--color-light-green);
+    text-shadow: 2px 2px 2px var(--color-dark-purple);
+    box-shadow: 7px 10px 7px rgba(0, 0, 0, 0.2), -3px -2px 5px -2px var(--color-light-green);
+    border-radius: 30px;
+    width: 80%;
+}
+.education ul li a {
+    color: var(--color-mid-green);
+    text-shadow: none;
+}
+.interests {
+    margin-bottom: 0;
+}
+.interests ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.interests ul li {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 2px #24111e;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2), -3px -2px 5px -2px var(--color-light-purple);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+footer {
+    background-color: #0e0e0f;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px 0;
+}
+
+script {
+    display: none;
 }
