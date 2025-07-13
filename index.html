@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fama Harbunou CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="images/avatar.jpg" alt="Author's Photo" width="320" height="320" class="avatar">
+            <nav class="contact">
+                <ul class="rotating-links">
+                    <li class="link-github rotating-links"><a href="http://github.com/PG-54"><img src="images/github.png" alt="github" width="60" height="60"></a></li>
+                    <li class="link-telegram rotating-links"><a href="https://t.me/PG_54"><img src="images/telegram.png" alt="telegram" width="60" height="60"></a></li>
+                    <li class="link-email rotating-links"><a href="mailto:gedonisticussr@gmail.com"><img src="images/mail.png" alt="email" width="60" height="60"></a></li>
+                    <li class="link-linkedin rotating-links"><a href="www.linkedin.com/in/fama-harbunou"><img src="images/linkedin.png" alt="linkedin" width="60" height="60"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>FAMA HARBUNOU</h1>
+        <p>Junior JS / Frontend Developer</p>
+    </header>
+    <hr>
+    <main>
+        
+        <section class="experience">
+            <h2>Experience</h2>
+            <p>Well, I've made a few websites and some photoshop projects.<br>Oh, I also have made a Space-Invader-like game with PyGame library.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><img src="images/js.png" alt="js icon"></li>
+                <li><img src="images/git.png" alt="git icon"></li>
+                <li><img src="images/html.png" alt="html icon"></li>
+                <li><img src="images/CSS.png" alt="css icon"></li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <p>None really, yet.<br>But here's a code example:</p>
+            <pre>
+                <code>
+&frasl;&frasl;function that counts letters in strings
+
+function count(string) {
+  let obj = {};
+  for (ch of string) {
+    obj[ch] ? obj[ch]++ : obj[ch] = 1;
+  }
+  return obj;
+}
+
+
+&frasl;&frasl;function that converts rgb to hex
+
+function rgb(r, g, b) {
+  return [r, g, b].map(v => {
+    if (v &gt; 255) return 255;
+    if (v &lt; 0) return 0;
+    return v;
+  })
+  .map(v =&gt; v.toString(16))
+  .map(v =&gt; v.length == 1 ? '0' + v : v)
+  .reduce((v, res) =&gt; v + res, '')
+  .toUpperCase();
+}
+                </code>
+            </pre>
+        </section>
+
+        <section class="about-me">
+            <h2>About Me</h2>
+            <ul>
+                <li>
+                    <h3>Resilient and Persistent</h3>
+                    <p>I've faced various challenges, both physical and emotional, that taught me resilience and adaptability.<br>These experiences help me stay calm under pressure and find practical solutions.</p>
+                </li>
+                <li>
+                    <h3>Open Minded</h3>
+                    <p>I've had the chance to try different things and directions, skills and hobbies.<br>I easily adapt to new trends, environments and ideas.</p>
+                </li>
+                <li>
+                    <h3>Easily Immerse in the Task</h3>
+                    <p>I commit to each task with attention to detail, aiming for exceptional results, but I know when to stop and move on.</p>
+                </li>
+            </ul>    
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li><a href="">RS-School JS &frasl; Frontend</a> course. Hopefully.</li>
+                <li>English Level: B2</li>
+            </ul>
+        </section>
+
+        <section class="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li><img src="images/coding.png" alt="coding image">Programming</li>
+                <li><img src="images/d20.png" alt="D20 dice">D&amp;D</li>
+                <li><img src="images/lyre.png" alt="lyre">Music</li>
+                <li><img src="images/camera.png" alt="camera">Amateur Film Making</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>&copy;2025</p>
+            <a href="http://github.com/PG-54">My GitHub</a>
+        </div>
+        <div>
+            <a href="https://rs.school/courses/javascript"><img src="images/rss-logo.c19ce1b4.svg" alt="RSS Logo" width="200" height="200"></a>
+        </div>
+        <div>
+            <span>Icons are made by arists<br>from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a>:</span>
+            <ul>
+                <li><a href="https://www.flaticon.com/authors/hilmy-abiyyu-a" title="Hilmy Abiyyu A.">Hilmy Abiyyu A.</a> </li>
+                <li><a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a></li>
+                <li><a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a></li>
+                <li><a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a></li>
+                <li><a href="https://www.freepik.com" title="Freepik">Freepik</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+        let rotatingLinks = document.querySelectorAll('.rotating-links');
+        let rotatingUl = document.querySelector('header div nav ul');
+        
+        rotatingUl.addEventListener('mouseenter', function() {
+            rotatingUl.style.animationPlayState = 'paused'
+            rotatingLinks.forEach(item => item.style.animationPlayState = 'paused')
+        })
+        rotatingUl.addEventListener('mouseleave', function() {
+            rotatingUl.style.animationPlayState = 'running'
+            rotatingLinks.forEach(item => item.style.animationPlayState = 'running')
+        })
+    </script>
+</body>
+</html>
