@@ -21,13 +21,53 @@
         <p>Junior JS / Frontend Developer</p>
     </header>
     <main>
+        
         <section class="experience">
+            <h2>Experience</h2>
+            <p>Well, I've made a few websites and some photoshop projects. Oh, i also have made a Space-Invader-like game with PyGame library.</p>
         </section>
 
         <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>JS</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>GIT</li>
+            </ul>
         </section>
 
         <section class="projects">
+            <h2>Projects</h2>
+            <p>None really, yet. But here's a code example:</p>
+            <pre>
+                <code>
+&frasl;&frasl;function that counts letters in strings
+
+function count(string) {
+  let obj = {};
+  for (ch of string) {
+    obj[ch] ? obj[ch]++ : obj[ch] = 1;
+  }
+  return obj;
+}
+
+
+&frasl;&frasl;function that converts rgb to hex
+
+function rgb(r, g, b) {
+  return [r, g, b].map(v => {
+    if (v &gt; 255) return 255;
+    if (v &lt; 0) return 0;
+    return v;
+  })
+  .map(v =&gt; v.toString(16))
+  .map(v =&gt; v.length == 1 ? '0' + v : v)
+  .reduce((v, res) =&gt; v + res, '')
+  .toUpperCase();
+}
+                </code>
+            </pre>
         </section>
 
         <section class="about-me">
@@ -49,13 +89,28 @@
         </section>
 
         <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li><a href="">RS-School JS &frasl; Frontend</a> course. Hopefully.</li>
+            </ul>
         </section>
 
         <section class="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li><img src="" alt="">Programming</li>
+                <li><img src="" alt="">D&amp;D</li>
+                <li><img src="" alt="">Music</li>
+                <li><img src="" alt="">Amateur Film Making</li>
+            </ul>
         </section>
     </main>
     <footer>
-
+        <div>
+            <p>&copy;2025</p>
+            <a href="http://github.com/PG-54">My GitHub</a>
+        </div>
+        <a href="https://rs.school/courses/javascript"><img src="images/rss-logo.c19ce1b4.svg" alt="RSS Logo" width="80" height="80">RSS course</a>
     </footer>
 </body>
 </html>
