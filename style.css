@@ -5,7 +5,7 @@
     --color-light-purple: #A64D79;
     --color-dark-green: #0B2F15;
     --color-mid-green: #034110;
-    --color-light-green: #1F774D;
+    --color-light-green: #188530;
 
 }
 * {
@@ -18,10 +18,87 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-light-purple);
+    padding: 60px 0;
 }
 
 body > * {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+header div {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    padding: 40px 0;
+}
+.avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: var(--color-dark-purple) 10px solid;
+}
+header nav ul {
+    width: 440px;
+    height: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 10px dotted var(--color-light-purple);
+}
+header nav ul li {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-light-green);
+    border-radius: 50%;
+}
+header nav ul li a, header nav ul li a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+}
+header nav ul li a img {
+    width: 90%;
+    height: 90%;
+}
+
+.link-github {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.link-telegram {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.link-email {
+    bottom: -5px;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+.link-linkedin {
+    bottom: 50%;
+    left: -5px;
+    transform: translate(-50%, 50%);
+}
+
+
+.link-github a {
+    width: 80%;
+    height: 80%;
+}
+ .link-telegram a, .link-email a {
+    width: 70%;
+    height: 70%;
 }
