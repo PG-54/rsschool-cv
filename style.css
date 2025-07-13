@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
 :root {
     --color-bg: #1A1A1D;
     --color-dark-purple: #3B1C32;
@@ -9,6 +14,8 @@
 
 }
 * {
+    letter-spacing: 1.5px;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -33,6 +40,9 @@ header div {
     width: 440px;
     height: 440px;
     padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .avatar {
     position: absolute;
@@ -43,14 +53,12 @@ header div {
     border: var(--color-dark-purple) 10px solid;
 }
 header nav ul {
-    width: 440px;
-    height: 440px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     border: 10px dotted var(--color-light-purple);
+    position: relative;
+    animation: rotate-links 15s linear infinite;
 }
 header nav ul li {
     position: absolute;
@@ -58,14 +66,21 @@ header nav ul li {
     height: 70px;
     background-color: var(--color-light-green);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease-in;
+    animation: rotate-links 15s linear infinite reverse;
 }
-header nav ul li a, header nav ul li a img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+header nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60%;
     height: 60%;
+
+    transition: all 0.2s ease-out;
 }
 header nav ul li a img {
     width: 90%;
@@ -73,32 +88,44 @@ header nav ul li a img {
 }
 
 .link-github {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: -35px;
+    left: calc(50% - 35px);
 }
 .link-telegram {
-    top: 50%;
-    right: 0;
-    transform: translate(50%, -50%);
+    right: -40px;
+    top: calc(50% - 35px);
 }
 .link-email {
-    bottom: -5px;
-    right: 50%;
-    transform: translate(50%, 50%);
+    bottom: -40px;
+    left: calc(50% - 35px);
 }
 .link-linkedin {
-    bottom: 50%;
-    left: -5px;
-    transform: translate(-50%, 50%);
+    left: -40px;
+    bottom: calc(50% - 35px);
 }
-
-
 .link-github a {
     width: 80%;
     height: 80%;
 }
- .link-telegram a, .link-email a {
+.link-telegram a, .link-email a {
     width: 70%;
     height: 70%;
+}
+header nav ul li a:hover, header nav ul li a:active {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+@keyframes rotate-links {
+    0% {
+        transform: rotate(0deg);
+    }    
+    100% {
+        transform: rotate(360deg);
+    }
 }
