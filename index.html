@@ -59,7 +59,7 @@ function count(string) {
 &frasl;&frasl;function that converts rgb to hex
 
 function rgb(r, g, b) {
-  return [r, g, b].map(v => {
+  return [r, g, b].map(v =&gt; {
     if (v &gt; 255) return 255;
     if (v &lt; 0) return 0;
     return v;
